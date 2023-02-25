@@ -2,5 +2,7 @@
   max-width: 680px;
   width: 100%;
   border-radius: 10px;
+  min-height: calc(100vh - 60px);
+  /* height: 100px; */
   @apply bg-slate-600;
 }
