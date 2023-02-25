@@ -1,0 +1,84 @@
+@import "../../variables";
+
+.sidebar {
+  color: #333;
+
+  max-width: 446px;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__text {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: $light-theme-text-color;
+}
+
+.logo {
+  width: 106px;
+  height: 24px;
+  margin-bottom: 211px;
+}
+@mixin navelem {
+  display: block;
+  width: 138px;
+  height: 198px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 10px 0;
+  width: 138px;
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.nav__btn {
+  @include btn;
+  color: #ff868e;
+  background: #fff;
+}
+
+.nav__btn_active {
+  @include btn;
+  color: #fff;
+  background: #ff868e;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__element {
+  &_voting {
+    @include navelem;
+
+    background: #b4b7ff;
+    border: 4px solid #fbe0dc;
+    border-radius: 20px;
+  }
+
+  &_breeds {
+    @include navelem;
+    background: #97eab9;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+  }
+
+  &_gallery {
+    @include navelem;
+    background: #ffd280;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+  }
+}

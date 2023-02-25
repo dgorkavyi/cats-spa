@@ -1,5 +1,7 @@
 const routes = {
-  test: "/test",
+  voting: "/voting",
+  breeds: "/breeds",
+  gallery: "/gallery",
 };
 
 export default routes;

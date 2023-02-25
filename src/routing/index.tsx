@@ -3,6 +3,10 @@ import React from "react";
 import Layout from "../components/layout";
 import routes from "./routes";
 import ErrorPage from "../error-page";
+import Index from "../components/index";
+import Gallery from "../components/gallery";
+import Breeds from "../components/breeds";
+import Voting from "../components/voting";
 
 const routing = createBrowserRouter([
   {
@@ -10,8 +14,10 @@ const routing = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { element: <div>INDEX</div>, index: true },
-      { path: routes.test, element: <div>TEST PAGE</div> },
+      { element: <Index />, index: true },
+      { path: routes.voting, element: <Voting /> },
+      { path: routes.breeds, element: <Breeds /> },
+      { path: routes.gallery, element: <Gallery /> },
     ],
   },
 ]);
