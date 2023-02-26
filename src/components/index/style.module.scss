@@ -1,3 +1,6 @@
 .index {
-  color: #333;
+  @apply rounded-[20px] bg-indexcolor h-full;
+  img {
+    @apply relative max-w-6xl right-[94px] bottom-[30px] w-[775px] h-[900px];
+  }
 }
