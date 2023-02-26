@@ -1,11 +1,7 @@
 .layout {
-  padding: 30px 30px 0 150px;
-  width: 100%;
-  min-height: 100vh;
+  @apply w-full min-h-screen pt-[30px] pr-[30px] pb-0 pl-[150px];
 }
 
 .container {
-    min-height: 100%;
-    display: flex;
-    justify-content: space-between;
+  @apply min-h-full flex justify-between;
 }
