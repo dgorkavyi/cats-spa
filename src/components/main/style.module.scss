@@ -1,5 +1,3 @@
 .main {
-  max-width: 680px;
-  width: 100%;
-  min-height: calc(100vh - 60px);
+  @apply max-w-[680px] w-full min-h-[calc(100vh-60px)];
 }

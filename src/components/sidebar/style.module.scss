@@ -1,84 +1,71 @@
 @import "../../variables";
 
 .sidebar {
-  color: #333;
+  @apply text-[#333] w-full max-w-[446px] h-full;
+}
 
-  max-width: 446px;
-  width: 100%;
-  height: 100%;
+.navlink_hover {
+  &:hover {
+    .nav__element_voting,
+    .nav__element_breeds,
+    .nav__element_gallery {
+      @apply border-[#fff] duration-700;
+    }
+
+    .nav__btn {
+      @apply bg-[#ff868e] text-[#fff];
+    }
+  }
 }
 
 .sidebar__text {
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 29px;
-  color: $light-theme-text-color;
+  @apply mb-[20px] font-medium text-[20px];
+  @apply leading-7 text-[$light-theme-text-color];
 }
 
 .logo {
-  width: 106px;
-  height: 24px;
-  margin-bottom: 211px;
+  @apply w-[106px] h-6 mb-[211px];
 }
 @mixin navelem {
-  display: block;
-  width: 138px;
-  height: 198px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply flex w-[138px] h-[198px] mb-[10px];
+  @apply justify-center items-center duration-700;
 }
 
 @mixin btn {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  padding: 10px 0;
-  width: 138px;
-  border-radius: 10px;
-  text-align: center;
-  letter-spacing: 2px;
+  @apply font-medium text-[12px] leading-4;
+  @apply py-[10px] w-[138px] rounded-[10px];
+  @apply text-center tracking-[2px] duration-700;
 }
 
 .nav__btn {
   @include btn;
-  color: #ff868e;
-  background: #fff;
+  @apply text-[#ff868e] bg-[#fff];
 }
 
 .nav__btn_active {
   @include btn;
-  color: #fff;
-  background: #ff868e;
+  @apply text-[#fff] bg-[#ff868e];
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
+  @apply flex justify-between;
 }
 
 .nav__element {
   &_voting {
     @include navelem;
-
-    background: #b4b7ff;
-    border: 4px solid #fbe0dc;
-    border-radius: 20px;
+    @apply bg-[#b4b7ff] border-4 border-solid border-[#fbe0dc] rounded-[20px];
   }
 
   &_breeds {
     @include navelem;
-    background: #97eab9;
-    border: 4px solid rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
+    @apply bg-[#97eab9] border-4 border-solid;
+    @apply border-[#fff] border-opacity-60 rounded-[20px];
   }
 
   &_gallery {
     @include navelem;
-    background: #ffd280;
-    border: 4px solid rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
+    @apply rounded-[20px] bg-[#ffd280] border-4 border-solid;
+    @apply border-[#fff] border-opacity-60;
   }
 }
