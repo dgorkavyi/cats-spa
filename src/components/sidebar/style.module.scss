@@ -9,7 +9,7 @@
     .nav__element_voting,
     .nav__element_breeds,
     .nav__element_gallery {
-      @apply border-[#fff] duration-700;
+      @apply border-[#fff] duration-150;
     }
 
     .nav__btn {
@@ -28,13 +28,13 @@
 }
 @mixin navelem {
   @apply flex w-[138px] h-[198px] mb-[10px];
-  @apply justify-center items-center duration-700;
+  @apply justify-center items-center duration-150;
 }
 
 @mixin btn {
   @apply font-medium text-[12px] leading-4;
   @apply py-[10px] w-[138px] rounded-[10px];
-  @apply text-center tracking-[2px] duration-700;
+  @apply text-center tracking-[2px] duration-150;
 }
 
 .nav__btn {
