@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import routes from "../../routing/routes";
 import logo from "../../images/Logo.svg";
 import styles from "./style.module.scss";
@@ -7,49 +7,45 @@ import nav__img_voting from "../../images/vote-table.png";
 import nav__img_breeds from "../../images/pet-breeds.png";
 import nav__img_gallery from "../../images/images-search.png";
 
-function SideBarLinks() {
-  const defaultState = {
-    voting: false,
-    breeds: false,
-    gallery: false,
-  };
-  const [style, setStyle] = useState(defaultState);
+const defaultState = {
+  voting: false,
+  breeds: false,
+  gallery: false,
+};
 
-  function activateLink(name: string) {
-    return () => setStyle({ ...defaultState, [name]: true });
-  }
+function SideBarLinks() {
+  const [style, setStyle] = useState(defaultState);
+  const loc = useLocation();
 
   const votingStyle = style.voting ? styles.nav__btn_active : styles.nav__btn;
   const breedsStyle = style.breeds ? styles.nav__btn_active : styles.nav__btn;
   const galleryStyle = style.gallery ? styles.nav__btn_active : styles.nav__btn;
 
+  useEffect(() => {
+    const activateLink = (name: string) =>
+      setStyle({ ...defaultState, [name]: true });
+
+    if (loc.pathname.includes("breeds")) activateLink("breeds");
+    if (loc.pathname.includes("voting")) activateLink("voting");
+    if (loc.pathname.includes("gallery")) activateLink("gallery");
+    if (loc.pathname === "/") setStyle(defaultState);
+  }, [loc]);
+
   return (
     <>
-      <NavLink
-        to={routes.voting}
-        className={styles.navlink_hover}
-        onClick={activateLink("voting")}
-      >
+      <NavLink to={routes.voting} className={styles.navlink_hover}>
         <div className={styles.nav__element_voting}>
           <img src={nav__img_voting} alt="nav img" />
         </div>
         <div className={votingStyle}>VOTING</div>
       </NavLink>
-      <NavLink
-        to={routes.breeds}
-        className={styles.navlink_hover}
-        onClick={activateLink("breeds")}
-      >
+      <NavLink to={routes.breeds} className={styles.navlink_hover}>
         <div className={styles.nav__element_breeds}>
           <img src={nav__img_breeds} alt="nav img" />
         </div>
         <div className={breedsStyle}>BREEDS</div>
       </NavLink>
-      <NavLink
-        to={routes.gallery}
-        className={styles.navlink_hover}
-        onClick={activateLink("gallery")}
-      >
+      <NavLink to={routes.gallery} className={styles.navlink_hover}>
         <div className={styles.nav__element_gallery}>
           <img src={nav__img_gallery} alt="nav img" />
         </div>
