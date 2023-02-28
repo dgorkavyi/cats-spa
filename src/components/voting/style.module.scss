@@ -1,3 +1,77 @@
 .voting {
   @apply text-[#333];
 }
+.voting_body {
+  @apply bg-[#fff] rounded-[20px] p-[20px];
+}
+.action_log {
+  @apply flex items-center justify-between py-[15px] px-[20px] bg-[#f8f8f7] rounded-[10px];
+
+  & + & {
+    @apply mt-[10px];
+  }
+}
+.action_log__time {
+  @apply flex justify-center items-center bg-[#fff] rounded-[5px] w-[60px] h-[30px] text-[16px] leading-[24px] text-[#1d1d1d];
+}
+.action_log__text {
+  @apply ml-[20px] text-[#8c8c8c] font-normal;
+  .log_id {
+    @apply text-[#1d1d1d] font-medium;
+  }
+}
+.action_log__icon {
+  @apply ml-auto;
+  svg {
+    @apply w-[20px] h-[20px];
+  }
+  &_favorite path {
+    fill: #ff868e;
+  }
+  &_like path {
+    fill: #97eab9;
+  }
+  &_dislike path {
+    fill: #ffd280;
+  }
+}
+
+.voting__nav {
+  @apply flex mb-[20px];
+  button {
+    @apply p-[10px] bg-[#fbe0dc] rounded-[10px] font-medium leading-[30px] text-[20px] tracking-[2px];
+
+    svg {
+      @apply w-[20px] h-[20px];
+      path {
+        fill: #ff868e;
+      }
+    }
+  }
+}
+.voting__title {
+  @apply ml-[10px] bg-[#FF868E] text-[#fff] flex justify-center items-center py-[5px] px-[30px] text-[20px] font-medium uppercase leading-[2px] rounded-[10px];
+}
+.img__placeholder {
+  @apply w-[640px] h-[360px] bg-[#777] rounded-[20px];
+}
+.voting__img_controlls {
+  @apply inline-flex relative bottom-[44px] left-[calc(50%-128px)] gap-1 border-solid border-[#fff] border-4 rounded-[28px] bg-[#fff];
+
+  &_like {
+    @apply bg-[#97eab9] rounded-bl-3xl rounded-tl-3xl #{!important};
+  }
+  &_favorite {
+    @apply bg-[#ff868e] #{!important};
+  }
+  &_dislike {
+    @apply bg-[#ffd280] rounded-br-3xl rounded-tr-3xl #{!important};
+  }
+  button {
+    @apply p-[25px];
+
+    svg path {
+      fill: #fff;
+    }
+  }
+}
