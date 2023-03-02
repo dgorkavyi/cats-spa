@@ -1,3 +1,65 @@
 .gallery {
   @apply text-[#333];
 }
+
+.gallery__body {
+  @apply p-[20px] rounded-[20px] bg-[#fff];
+}
+
+.gallery_body_head {
+  @apply mb-[20px] h-[40px];
+}
+
+.upload {
+  @apply ml-auto  w-[143px] gap-[10px] duration-150 uppercase flex justify-center items-center font-medium text-xs leading-4 text-center text-[#ff868e];
+  letter-spacing: 2px;
+  background: #fbe0dc !important;
+
+  svg {
+    @apply rounded-none;
+  }
+
+  &:hover {
+    @apply text-[#fff];
+    background: #ff868e !important;
+    svg path {
+      @apply rounded-none fill-[#fff];
+    }
+  }
+}
+
+.gallery_form {
+  @apply mb-[20px] rounded-[10px] py-[10px] px-[20px] h-[156px] bg-[#F8F8F7];
+
+  .select_block + .select_block {
+    margin-left: 20px;
+  }
+  select {
+    @apply rounded-[10px] w-[290px] border-r-[10px] border-[#fff]  bg-[#fff] text-[#222] py-2 px-[10px];
+  }
+}
+
+.form_row {
+  @apply flex items-end justify-between;
+  & + & {
+    margin-top: 10px;
+  }
+}
+.reload_btn {
+  @apply ml-[10px] flex rounded-[10px] justify-center items-center w-[40px] h-[40px] bg-[#fff];
+  svg {
+    @apply w-[20px] h-[20px];
+  }
+}
+.select_limit {
+  width: 240px !important;
+}
+
+.select_text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 18px;
+  color: #8c8c8c;
+  margin-left: 10px;
+  text-transform: uppercase;
+}

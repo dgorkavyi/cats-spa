@@ -32,6 +32,7 @@
     ],
     "rules": {
         "default-param-last": "off",
-        "@typescript-eslint/default-param-last": "off"
+        "@typescript-eslint/default-param-last": "off",
+        "react/require-default-props": "off"
     }
 }

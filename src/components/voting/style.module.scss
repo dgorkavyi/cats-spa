@@ -40,10 +40,19 @@
   @apply flex gap-[10px] mb-[20px] h-[40px];
   * {
     @apply rounded-[10px];
+    letter-spacing: 2px;
   }
   .back_btn {
-    @apply p-[10px] font-medium leading-[30px] text-[20px] tracking-[2px];
+    @apply p-[10px] duration-150 font-medium leading-[30px] text-[20px] tracking-[2px];
+    &:hover {
+      @apply bg-[#ff868e];
 
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
     svg {
       @apply w-[20px] h-[20px];
       path {
