@@ -27,3 +27,12 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+
+input:focus,
+select:focus,
+.form-control:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

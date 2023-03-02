@@ -37,9 +37,12 @@
 }
 
 .voting__nav {
-  @apply flex mb-[20px];
-  button {
-    @apply p-[10px] bg-[#fbe0dc] rounded-[10px] font-medium leading-[30px] text-[20px] tracking-[2px];
+  @apply flex gap-[10px] mb-[20px] h-[40px];
+  * {
+    @apply rounded-[10px];
+  }
+  .back_btn {
+    @apply p-[10px] font-medium leading-[30px] text-[20px] tracking-[2px];
 
     svg {
       @apply w-[20px] h-[20px];
@@ -50,7 +53,7 @@
   }
 }
 .voting__title {
-  @apply ml-[10px] bg-[#FF868E] text-[#fff] flex justify-center items-center py-[5px] px-[30px] text-[20px] font-medium uppercase leading-[2px] rounded-[10px];
+  @apply bg-[#FF868E] text-[#fff] flex justify-center items-center py-[5px] px-[30px] text-[20px] font-medium uppercase leading-[2px] rounded-[10px];
 }
 .img__placeholder {
   @apply w-[640px] h-[360px] bg-[#777] rounded-[20px];

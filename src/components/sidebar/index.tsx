@@ -57,13 +57,15 @@ function SideBarLinks() {
 
 export default function SideBar() {
   return (
-    <div className={styles.sidebar}>
-      <NavLink to={routes.root}>
-        <img className={styles.logo} src={logo} alt="logo" />
-      </NavLink>
-      <p className={styles.sidebar__text}>Lets start using The Cat API</p>
-      <div className={styles.nav}>
-        <SideBarLinks />
+    <div className={styles.wrapper}>
+      <div className={styles.sidebar}>
+        <NavLink to={routes.root}>
+          <img className={styles.logo} src={logo} alt="logo" />
+        </NavLink>
+        <p className={styles.sidebar__text}>Lets start using The Cat API</p>
+        <div className={styles.nav}>
+          <SideBarLinks />
+        </div>
       </div>
     </div>
   );

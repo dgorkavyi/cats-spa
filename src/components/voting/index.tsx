@@ -13,7 +13,7 @@ function VotingBody() {
     <div className={styles.voting_body}>
       <div className={styles.voting__nav}>
         <NavLink style={{ display: "block" }} to={routes.root}>
-          <button type="button">
+          <button className={styles.back_btn} type="button">
             <ArrowLeft />
           </button>
         </NavLink>

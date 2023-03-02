@@ -1,7 +1,10 @@
 @import "../../variables";
 
+.wrapper {
+  @apply max-w-[446px] w-full h-full;
+}
 .sidebar {
-  @apply text-[#333] w-full max-w-[446px] h-full;
+  @apply fixed text-[#333] w-full max-w-[446px] h-full;
 }
 
 .navlink_hover {
