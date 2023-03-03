@@ -46,9 +46,17 @@
   }
 }
 .reload_btn {
-  @apply ml-[10px] flex rounded-[10px] justify-center items-center w-[40px] h-[40px] bg-[#fff];
+  @apply ml-[10px] flex rounded-[10px] justify-center items-center w-[40px] h-[40px];
+  background: #fff !important;
   svg {
     @apply w-[20px] h-[20px];
+  }
+  &:hover {
+    @apply duration-150;
+    background: #ff868e !important;
+    svg path {
+      fill: #fff;
+    }
   }
 }
 .select_limit {

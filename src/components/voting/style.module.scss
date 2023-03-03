@@ -66,6 +66,9 @@
 }
 .img__placeholder {
   @apply w-[640px] h-[360px] bg-[#777] rounded-[20px];
+  img {
+    @apply w-full h-full rounded-[20px];
+  }
 }
 .voting__img_controlls {
   @apply inline-flex relative bottom-[44px] left-[calc(50%-128px)] gap-1 border-solid border-[#fff] border-4 rounded-[28px] bg-[#fff];

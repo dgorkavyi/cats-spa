@@ -1,20 +1,25 @@
 import React from "react";
-import BackToRootArrow from "./backtoroot";
+import BackToRootArrow from "../backtoroot";
 import styles from "./style.module.scss";
 import votingStyles from "../voting/style.module.scss";
 import { ReactComponent as AscIcon } from "../../images/asc.svg";
 import { ReactComponent as DescIcon } from "../../images/desc.svg";
 
 function BreedSelector({ choose, list }: { choose: any; list: any[] }) {
+  const change = (e: any) => {
+    choose(e);
+  };
   return (
     <select
       className={styles.breed_select}
       name="breed"
       id="breed"
-      onChange={choose}
+      onChange={change}
     >
-      {list.map((elem: string) => (
-        <option value={elem}>{elem}</option>
+      {list.map(({ id, name }: any) => (
+        <option key={id} value={id}>
+          {name}
+        </option>
       ))}
     </select>
   );

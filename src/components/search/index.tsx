@@ -9,7 +9,6 @@ export default function Search() {
   const searchRef = useRef<HTMLInputElement>(null);
   const search = (e: FormEvent) => {
     e.preventDefault();
-    console.log("searchRef.current :>>", searchRef.current?.value);
   };
 
   return (
